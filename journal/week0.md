@@ -176,7 +176,7 @@ aws budgets create-budget \
  
  
 
-- Note - Andrew had created two variables i.e. - ACCOUNT_ID  and AWS_ACCOUNT_ID in the video lecture and used the first variable to get account ID details,  so i had edit the code since I only created the AWS_Account_ID variable 
+## Note - Andrew had created two variables i.e. - ACCOUNT_ID  and AWS_ACCOUNT_ID in the video lecture and used the first variable to get account ID details,  so i had edit the code since I only created the AWS_Account_ID variable 
 
 ![Budget Verification on AWS Console](assets/Budget%20created%20In%20console%20using%20CLI%20and%20threshold%20set.png)
 
