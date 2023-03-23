@@ -56,8 +56,8 @@ provider.add_span_processor(processor)
 
 
 # Xray------------------ THIS CHANGE
-#xray_url = os.getenv("AWS_XRAY_URL")
-#xray_recorder.configure(service='backend-flask', dynamic_naming=xray_url)
+xray_url = os.getenv("AWS_XRAY_URL")
+xray_recorder.configure(service='backend-flask', dynamic_naming=xray_url)
 
 
 # Show this in the logs within the backend-flask app
@@ -70,7 +70,7 @@ tracer = trace.get_tracer(__name__)
 app = Flask(__name__)
 
 # Xray------------------ THIS CHANGE
-#XRayMiddleware(app, xray_recorder)
+XRayMiddleware(app, xray_recorder)
 
 # Honeycomb---------------------------
 # Initialize automatic instrumentation with Flask
@@ -88,7 +88,7 @@ cors = CORS(
   allow_headers="content-type,if-modified-since",
   methods="OPTIONS,GET,HEAD,POST"
 )
-
+# CloudWatch -----------------aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 #@app.after_request
 #ef after_request(response):
  #   timestamp = strftime('[%Y-%b-%d %H:%M]')
@@ -155,6 +155,7 @@ def data_create_message():
   return
 
 @app.route("/api/activities/home", methods=['GET'])
+@xray_recorder.capture('activities_home')
 def data_home():
   data = HomeActivities.run()
   return data, 200
@@ -165,6 +166,7 @@ def data_notifications():
   return data, 200
 
 @app.route("/api/activities/@<string:handle>", methods=['GET'])
+@xray_recorder.capture('activities_home')
 def data_handle(handle):
   model = UserActivities.run(handle)
   if model['errors'] is not None:
