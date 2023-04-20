@@ -3,7 +3,7 @@
 - **Amazon Cognito Security Best Practices**
     - Common types of App Authentication
     
-    ![Untitled](Untitled%2043.png)
+    ![IMG](assets1/week3/Untitled%2043.png)
     
     What is DeCentralized Authentication
     
@@ -24,7 +24,7 @@
         - manages user access
         - it provides temporary credentials
     
-    ![Untitled](Untitled%2044.png)
+    ![](assets1/week3/Untitled%2044.png)
     
     ### Using AWS Cognito
     
@@ -53,19 +53,19 @@
     
     ### Why use AWS Cognito
     
-    ![Untitled](Untitled%2045.png)
+    ![](assets1/week3/Untitled%2045.png)
     
     ### User/token c**ycle management**
     
-    ![Untitled](Untitled%2046.png)
+    ![](assets1/week3/Untitled%2046.png)
     
-    ![Untitled](Untitled%2047.png)
+    ![](assets1/week3/Untitled%2047.png)
     
     ## Amazon Cognito services
     
-    ![Untitled](Untitled%2048.png)
+    ![](assets1/week3/Untitled%2048.png)
     
-    ![Untitled](Untitled%2049.png)
+    ![](assets1/week3/Untitled%2049.png)
     
 - **Live Session**
     
@@ -73,16 +73,16 @@
     
     - created a user pool
     
-    ![Untitled](Untitled%2050.png)
+    ![](assets1/week3/Untitled%2050.png)
     
     managed to configure the signin page and seee the error message in the console
     
-    ![Untitled](Untitled%2051.png)
+    ![](assets1/week3/Untitled%2051.png)
     
 - **Cognito Custom pages**
     - after creating a user we get the forced change password status
     
-    ![Untitled](Untitled%2052.png)
+    ![](assets1/week3/Untitled%2052.png)
     
     - so we need to allow the passwoed to be set
     - so that they can add the user and update status and then access the cognito pool
@@ -95,11 +95,11 @@
     
     ********************Successfull signin with the credentials********************
     
-    ![Untitled](Untitled%2053.png)
+    ![](assets1/week3/Untitled%2053.png)
     
     Managed to change the user name 
     
-    ![Untitled](Untitled%2054.png)
+    ![](assets1/week3/Untitled%2054.png)
     
     - now we need to setup the signup page so delete the cognito user
     - then paste this in signUP.js
@@ -137,7 +137,7 @@
       }
     ```
     
-    ![Untitled](Untitled%2055.png)
+    ![](assets1/week3/Untitled%2055.png)
     
     now add the resend code 
     
@@ -185,11 +185,11 @@
     
     Signup and confirmating configured 
     
-    ![Untitled](Untitled%2056.png)
+    ![](assets1/week3/Untitled%2056.png)
     
     **************************************************user Confirmed in Cognito**************************************************
     
-    ![Untitled](Untitled%2057.png)
+    ![](assets1/week3/Untitled%2057.png)
     
 - **Backend Implementation for Cognito**
     - in this we pass along our access token which was earlier created in the signin page stored in the local storage
@@ -222,7 +222,7 @@
       )
     ```
     
-    ![Untitled](Untitled%2058.png)
+    ![](assets1/week3/Untitled%2058.png)
     
     <aside>
     💡 You will get access token only if you are signedin on cruddur
@@ -243,7 +243,7 @@
     )
     ```
     
-    ![Untitled](Untitled%2059.png)
+    ![](assets1/week3/Untitled%2059.png)
     
     Add in requirements.txt annd 
     
@@ -280,7 +280,7 @@
         aws_auth = AWSCognitoAuthentication(app) 
         ```
         
-     ![Untitled](Untitled%2061.png)
+     ![](assets1/week3/Untitled%2061.png)
         
     
     - ******************************************Cognito token service******************************************
@@ -405,9 +405,16 @@
         
         - Then make the following changes in app.py
         
-        ![Untitled](Untitled%2062.png)
+        ![](assets1/week3/Untitled%2062.png)
         
-        ![Untitled](Untitled%2063.png)
+        ![](assets1/week3/Untitled%2063.png)
         
    
-    - Authenticated Claim message recieved
+    #### Authenticated Claim message recieved
+    - when signed in the secret message is visible (by @lore)
+
+        ![](assets1/week3/Untitled%2064.png))
+
+    - After signing out the secret message disappers
+
+        ![](assets1/week3/Untitled%2065.png))
